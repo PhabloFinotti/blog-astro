@@ -1,0 +1,16 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BlogPost from '../components/BlogPost.astro';
+
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+
+<MainLayout pageTitle="Blog">
+  <h2>... e meu novo site Astro!</h2>
+
+  <p>Estou resolvendo o tutorial introdutório do Astro. Esta é a segunda página no meu website, e é a primeira que eu mesmo construí!</p>
+
+  <p>Este site será atualizado enquanto eu completo mais desse tutorial, então continue verificando e veja como minha jornada está indo!</p>
+
+  <ul>{allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}</ul>
+</MainLayout>

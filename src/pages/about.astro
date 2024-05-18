@@ -1,0 +1,45 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const pageTitle = 'Sobre Mim';
+
+const identify = {
+  firstName: 'Phablo',
+  country: 'Brasil',
+  occupation: 'Desenvolvedor Web',
+  hobbies: ['programar', 'jogar video games'],
+};
+
+const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Astro', 'Vue', 'Laravel'];
+
+const skillColor = 'navy';
+const fontWeight = 'bold';
+const textCase = 'uppercase';
+---
+
+<style define:vars={{ skillColor, fontWeight, textCase }}>
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+</style>
+
+<MainLayout pageTitle="Sobre Mim">
+  <p>Aqui estão alguns fatos sobre mim:</p>
+  <ul>
+    <li>Meu nome é {identify.firstName}.</li>
+    <li>Eu moro no {identify.country} e eu trabalho como uma {identify.occupation}.</li>
+    {
+      identify.hobbies.length >= 2 && (
+        <li>
+          Dois dos meus hobbies são: {identify.hobbies[0]} and {identify.hobbies[1]}
+        </li>
+      )
+    }
+  </ul>
+  <p>Minhas habilidades são:</p>
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+</MainLayout>
