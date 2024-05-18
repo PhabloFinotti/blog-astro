@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Minha Segunda Postagem no Blog
-author: Aluno de Astro
+author: Phablo Finotti
 description: "Após aprender um pouco sobre Astro, eu não consegui parar!"
 image:
     url: "https://docs.astro.build/assets/arc.webp"

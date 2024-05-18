@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: Minha Terceira Postagem no Blog
-author: Aluno de Astro
+author: Phablo Finotti
 description: "Eu tive alguns desafios, mas perguntar na comunidade realmente me ajudou!"
 image:
     url: "https://docs.astro.build/assets/rays.webp"
